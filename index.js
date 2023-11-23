@@ -5,6 +5,7 @@ import morgan from "morgan";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 
+const path = require("path");
 //security package
 import helmet from "helmet";
 import dbConnection from "./dbConfig/index.js";
