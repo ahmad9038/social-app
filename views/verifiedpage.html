@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: aliceblue;
+        }
+        .card{
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .icon{
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .success{
+            color: green;
+        }
+
+        .error{
+            color: red;
+        }
+
+        .hideBtn{
+            display: none;
+        }
+
+        .showBtn{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            margin-top: 10px;
+        }
+
+    </style>
+    </head>
+    <body>
+        <div class="card">
+            <!-- <div class="icon">
+                <span id="statusIcon"></span>
+            </div> -->
+
+            <h1>Successfull</h1>
+
+            <div id="statudMessage" class></div>
+            <button
+                style="background-color: #7925c7; border: none; color: white; padding: 10px 15px; font-size: 20px; border-radius: 10px; cursor: pointer;"><a
+                    style="text-decoration: none; color: white"
+                    href="/login" id="btn"
+                    class>Login</a></button>
+
+        </div>
+
+        <script type="module" src="/script.js"></script>
+
+    </body>
+
+</html>
