@@ -18,7 +18,7 @@ let transporter = nodemailer.createTransport({
 const sendVerificationEmail = async (user, res) => {
   const { _id, email, lastName } = user;
   const token = _id + uuidv4();
-  const link = process.env.URL + "users/verify/" + _id + "/" + token;
+  const link = "/users/verify/" + _id + "/" + token;
 
   console.log(link);
 
@@ -66,7 +66,7 @@ const resetPasswordLink = async (user, res) => {
   const { _id, email } = user;
 
   const token = _id + uuidv4();
-  const link = process.env.URL + "users/reset-password/" + _id + "/" + token;
+  const link = "/users/reset-password/" + _id + "/" + token;
 
   console.log(link);
 
