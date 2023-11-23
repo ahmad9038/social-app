@@ -5,7 +5,10 @@ import morgan from "morgan";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 
+import { fileURLToPath } from "url";
 import path from "path";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 //security package
 import helmet from "helmet";
 import dbConnection from "./dbConfig/index.js";
@@ -35,8 +38,10 @@ app.use(errorMiddleware);
 
 // Serve static files
 app.use(express.static(path.join(__dirname, "./client/build")));
+
+// Handle all remaining routes by serving the index.html file
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 app.listen(PORT, () => {
