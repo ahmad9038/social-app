@@ -22,7 +22,19 @@ const PORT = process.env.PORT || 8800;
 dbConnection();
 
 app.use(express.static("./views"));
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+        styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+        fontSrc: ["'self'", "https://fonts.gstatic.com"],
+        imgSrc: ["'self'", "https://res.cloudinary.com/"],
+      },
+    },
+  })
+);
 app.use(cors());
 app.use(bodyParser.json());
 
