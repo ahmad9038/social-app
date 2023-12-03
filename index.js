@@ -31,6 +31,7 @@ app.use(
         styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
         fontSrc: ["'self'", "https://fonts.gstatic.com"],
         imgSrc: ["'self'", "https://res.cloudinary.com/"],
+        connectSrc: ["'self'", "https://api.cloudinary.com/", "https://res.cloudinary.com/"],
       },
     },
   })
